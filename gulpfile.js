@@ -18,12 +18,38 @@ gulp.task("css", function () {
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
-    // .pipe(server.stream());
+    .pipe(server.stream());
 });
+
+// gulp.task('scripts', function () {
+//   return gulp.src('./src/js/index.js')
+//     .pipe(webpackStream({
+//       output: {
+//         filename: 'app.js',
+//       },
+//       module: {
+//         rules: [
+//           {
+//             test: /\.(js)$/,
+//             exclude: /(node_modules)/,
+//             loader: 'babel-loader',
+//             query: {
+//               presets: ['env']
+//             }
+//           }
+//         ]
+//       }
+//     }))
+//     .pipe(gulp.dest('./build/'))
+//     .pipe(uglify())
+//     .pipe(rename({ suffix: '.min' }))
+//     .pipe(gulp.dest('./build/'));
+// });
 
 gulp.task("server", function () {
   server.init({
     server: "source/",
+    injectChanges: true,
     notify: false,
     open: true,
     cors: true,

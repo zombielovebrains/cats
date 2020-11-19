@@ -2,14 +2,235 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <title>Каталог котиков</title>
 </head>
 <body>
   <div class="max-box">
-
+    <button class="up-btn visually-hidden"></button>
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__flexwrap">
+          <div class="page-header__logo">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-desktop.png">
+              <source media="(min-width: 1024px)" srcset="img/logo-desktop.png">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.png">
+              <img src="img/logo-mobile.png" alt="Логотип">
+            </picture>
+          </div>
+          <nav class="page-header__nav main-nav">
+            <button class="main-nav__burger"></button>
+            <ul class="main-nav__list">
+              <button type="button" class="main-nav__close"></button>
+              <li class="main-nav__item"> <a href="#" class="main-nav__link"><span>Main</span></a></li>
+              <li class="main-nav__item main-nav__item--active"><a href="#" class="main-nav__link"><span>Gallery</span></a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link"><span>News</span></a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link"><span>Profile</span></a></li>
+            </ul>
+          </nav>
+          <div class="page-header__contacts">
+            <p class="page-header__phone-number">+544 3490 00000</p>
+            <p class="page-header__text">Звони скорее!</p>
+          </div>
+        </div>
+        <div class="page-header__flexwrap">
+          <h2 class="page-header__title">Найдено 349 котов</h2>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <section class="modal visually-hidden">
+        <div class="modal__box modal__box-hidden">
+          <div class="modal__innerwrap">
+            <button class="modal__close" />
+            <p class="modal__text">Котик добавлен в избранные!</p>
+          </div>
+        </div>
+      </section>
+      <section class="filter">
+        <div class="container">
+          <div class="filter__flexwrap">
+            <p class="filter__title">Сортировать по:</p>
+            <p class="filter__option">
+              Цене
+              <button type="button" class="filter__arrow-icon filter__arrow-icon--inscrease"></button>
+            </p>
+            <p class="filter__option">
+              Возрасту
+              <button type="button" class="filter__arrow-icon"></button>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="container">
+          <ul class="catalog__list">
+            <li class="catalog__item product-card sale" data-price="30000" data-age="2">
+              <div class="product-card__photobox">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/cat01-desktop.jpg">
+                  <source media="(min-width: 1024px)" srcset="img/cat01-tablet-large.jpg">
+                  <source media="(min-width: 768px)" srcset="img/cat01-tablet.jpg">
+                  <img src="img/cat01-mobile.jpg" alt="Логотип" class="product-card__photo">
+                </picture>
+                <div class="product-card__sale-label">-40%</div>
+                <button type="button" class="product-card__like-btn"></button>
+              </div>
+              <div class="product-card__info">
+                <p class="product-card__name">Кот полосатый</p>
+                <div class="product-card__flexwrap">
+                  <p class="product-card__text product-card__text--color">Коричневый окрас</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">2 мес.</span>Возраст</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">4</span>Кол-во лап</p>
+                </div>
+                <p class="product-card__price">30 000 руб.</p>
+              </div>
+              <button type="button" class="product-card__button">Купить</button>
+            </li>
+            <li class="catalog__item product-card sold like" data-price="40000" data-age="6">
+              <div class="product-card__photobox">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/cat02-desktop.jpg">
+                  <source media="(min-width: 1024px)" srcset="img/cat02-tablet-large.jpg">
+                  <source media="(min-width: 768px)" srcset="img/cat02-tablet.jpg">
+                  <img src="img/cat02-mobile.jpg" alt="Логотип" class="product-card__photo">
+                </picture>
+                <div class="product-card__sale-label">-40%</div>
+                <button type="button" class="product-card__like-btn"></button>
+              </div>
+              <div class="product-card__info">
+                <p class="product-card__name">Кот полосатый</p>
+                <div class="product-card__flexwrap">
+                  <p class="product-card__text product-card__text--color">Коричневый окрас</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">6 мес.</span>Возраст</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">4</span>Кол-во лап</p>
+                </div>
+                <p class="product-card__price">40 000 руб.</p>
+              </div>
+              <button type="button" class="product-card__button">Купить</button>
+            </li>
+            <li class="catalog__item product-card" data-price="30000" data-age="2">
+              <div class="product-card__photobox">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/cat03-desktop.jpg">
+                  <source media="(min-width: 1024px)" srcset="img/cat03-tablet-large.jpg">
+                  <source media="(min-width: 768px)" srcset="img/cat03-tablet.jpg">
+                  <img src="img/cat03-mobile.jpg" alt="Логотип" class="product-card__photo">
+                </picture>
+                <div class="product-card__sale-label">-40%</div>
+                <button type="button" class="product-card__like-btn"></button>
+              </div>
+              <div class="product-card__info">
+                <p class="product-card__name">Кот полосатый</p>
+                <div class="product-card__flexwrap">
+                  <p class="product-card__text product-card__text--color">Коричневый окрас</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">2 мес.</span>Возраст</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">4</span>Кол-во лап</p>
+                </div>
+                <p class="product-card__price">30 000 руб.</p>
+              </div>
+              <button type="button" class="product-card__button">Купить</button>
+            </li>
+            <li class="catalog__item product-card" data-price="25000" data-age="2">
+              <div class="product-card__photobox">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/cat01-desktop.jpg">
+                  <source media="(min-width: 1024px)" srcset="img/cat01-tablet-large.jpg">
+                  <source media="(min-width: 768px)" srcset="img/cat01-tablet.jpg">
+                  <img src="img/cat01-mobile.jpg" alt="Логотип" class="product-card__photo">
+                </picture>
+                <div class="product-card__sale-label">-40%</div>
+                <button type="button" class="product-card__like-btn"></button>
+              </div>
+              <div class="product-card__info">
+                <p class="product-card__name">Кот полосатый</p>
+                <div class="product-card__flexwrap">
+                  <p class="product-card__text product-card__text--color">Коричневый окрас</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">2 мес.</span>Возраст</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">4</span>Кол-во лап</p>
+                </div>
+                <p class="product-card__price">25 000 руб.</p>
+              </div>
+              <button type="button" class="product-card__button">Купить</button>
+            </li>
+            <li class="catalog__item product-card sale" data-price="30000" data-age="2">
+              <div class="product-card__photobox">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/cat03-desktop.jpg">
+                  <source media="(min-width: 1024px)" srcset="img/cat03-tablet-large.jpg">
+                  <source media="(min-width: 768px)" srcset="img/cat03-tablet.jpg">
+                  <img src="img/cat03-mobile.jpg" alt="Логотип" class="product-card__photo">
+                </picture>
+                <div class="product-card__sale-label">-40%</div>
+                <button type="button" class="product-card__like-btn"></button>
+              </div>
+              <div class="product-card__info">
+                <p class="product-card__name">Кот полосатый</p>
+                <div class="product-card__flexwrap">
+                  <p class="product-card__text product-card__text--color">Коричневый окрас</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">2 мес.</span>Возраст</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">4</span>Кол-во лап</p>
+                </div>
+                <p class="product-card__price">30 000 руб.</p>
+              </div>
+              <button type="button" class="product-card__button">Купить</button>
+            </li>
+            <li class="catalog__item product-card sold like" data-price="10000" data-age="8">
+              <div class="product-card__photobox">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/cat02-desktop.jpg">
+                  <source media="(min-width: 1024px)" srcset="img/cat02-tablet-large.jpg">
+                  <source media="(min-width: 768px)" srcset="img/cat02-tablet.jpg">
+                  <img src="img/cat02-mobile.jpg" alt="Логотип" class="product-card__photo">
+                </picture>
+                <div class="product-card__sale-label">-40%</div>
+                <button type="button" class="product-card__like-btn"></button>
+              </div>
+              <div class="product-card__info">
+                <p class="product-card__name">Кот полосатый</p>
+                <div class="product-card__flexwrap">
+                  <p class="product-card__text product-card__text--color">Коричневый окрас</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">8 мес.</span>Возраст</p>
+                  <p class="product-card__text product-card__text--column"><span class="product-card__data">4</span>Кол-во лап</p>
+                </div>
+                <p class="product-card__price">10 000 руб.</p>
+              </div>
+              <button type="button" class="product-card__button">Купить</button>
+            </li>
+          </ul>
+          <buttton class="catalog__btn" type="button">Показать еще 20</buttton>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="container">
+          <div class="subscribe__innerwrap">
+            <div class="subscribe__leftcol">
+              <b class="subscribe__title">Успей купить!</b>
+              <p class="subscribe__description">Подпишись и успей словить все акции</p>
+            </div>
+            <div class="subscribe__rightcol">
+              <form action="" method="post" class="subscribe__form">
+                <div class="subscribe__flexwrap">
+                  <input type="email" name="email" id="email" placeholder="Email" class="subscribe__input" required>
+                  <label for="email" class="visually-hidden">Email</label>
+                  <div class="subscribe__checkbox">
+                    <input type="checkbox" name="subscribe" id="subscribe-checkbox" required checked>
+                    <label for="subscribe-checkbox" class="subscribe__checkbox-label">Подписаться на новости</label>
+                  </div>
+                  <button type="submit" class="subscribe__btn">Подписаться</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
 </body>
 </html>

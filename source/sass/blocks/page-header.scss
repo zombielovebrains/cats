@@ -1,0 +1,153 @@
+.page-header {
+  background-image: url("../img/header-bg.jpg");
+  background-size: cover;
+  background-position: center;
+
+  min-height: 160px;
+  padding-top: 20px;
+}
+
+.page-header__flexwrap {
+  display: flex;
+}
+
+.page-header__logo {
+  margin-left: 20px;
+  order: 1;
+}
+
+.page-header__contacts {
+  margin-left: auto;
+  order: 3;
+}
+
+.page-header__phone-number {
+  font-family: $font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 120%;
+  color: #fff;
+
+  margin-bottom: 3px;
+}
+
+.page-header__text {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: right;
+
+  color: #fff;
+}
+
+.page-header__title {
+  font-family: $font;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 120%;
+  color: #fff;
+
+  margin-top: 30px;
+}
+
+@media(min-width: 768px) {
+  .page-header {
+    min-height: 180px;
+    padding-top: 30px;
+  }
+
+  .page-header__flexwrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-header__logo {
+    margin-left: 30px;
+  }
+
+  .page-header__contacts {
+    margin-left: auto;
+    margin-top: 5px;
+    order: 3;
+  }
+
+  .page-header__phone-number {
+    font-size: 18px;
+  }
+
+  .page-header__title {
+    font-size: 26px;
+  }
+
+  .page-header__nav {
+    order: 0;
+  }
+}
+
+
+@media(min-width: 1024px) {
+  .page-header {
+    min-height: 222px;
+    padding-top: 35px;
+  }
+
+  .page-header__logo {
+    margin-left: 0;
+    margin-right: 80px;
+    order: 0;
+  }
+
+  .page-header__phone-number {
+    font-size: 22px;
+  }
+
+  .page-header__text {
+    font-size: 16px;
+  }
+
+  .page-header__title {
+    font-size: 36px;
+    margin-top: 37px;
+  }
+
+  .page-header__contacts {
+    margin-top: 10px;
+    order: 3;
+  }
+
+  .page-header__nav {
+    order: 2;
+  }
+
+  .page-header__flexwrap {
+    align-items: flex-start;
+  }
+}
+
+
+@media(min-width: 1200px) {
+  .page-header {
+    min-height: 252px;
+    padding-top: 40px;
+  }
+
+  .page-header__logo {
+    margin-right: 120px;
+  }
+
+  .page-header__phone-number {
+    font-size: 24px;
+  }
+
+  .page-header__text {
+    font-size: 18px;
+  }
+
+  .page-header__title {
+    font-size: 38px;
+  }
+}
+
